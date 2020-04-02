@@ -1,0 +1,24 @@
+<div class="good">
+  <h1>Good quotes</h1>
+  <hr>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div *ngFor="let quote of quotes;let i = index" class="card" style="width: 24rem;">
+        <div>
+          <div class="col-md-12">
+            <div class="card-body">
+          <h4 class="card-tittle" appStrikethrough>{{quote.name}} </h4>
+          <button (click)='readMore(i)' class="btn btn-success">Read More</button>
+        </div>
+
+        <div class="card-body">
+          <app-quote-details *ngIf='quote.showDetail' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
