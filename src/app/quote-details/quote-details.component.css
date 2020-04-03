@@ -1,3 +1,7 @@
 .form-group{
     margin-top: inherit;
 }
+p{
+    float: inline-end;
+    background-color: peachpuff;
+}
