@@ -11,3 +11,12 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.card-body{
+    text-align: unset;
+    background-color: transparent;
+}
+.container-fluid{
+    background-color: transparent;
+    font-style: italic;
+
+}
