@@ -1,28 +1,29 @@
-<div class="good">
-  <h1>Good quotes</h1>
-  <hr>
+<link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet">
 <div class="container">
+  <h1>GOOD QUOTES</h1>
+  <hr>
+<div class="container-fluid">
   <div class="row">
-    <div class="col-12">
+    <div class="col">
       <div *ngFor="let quote of quotes;let i = index" class="card" style="width: 24rem;">
-        <div>
-          <div class="col-md-12">
+        
+          <div class="col-md-10">
             <div class="card-body">
           <h4 class="card-tittle" appStrikethrough>{{quote.name}} </h4>
-          <button (click)='readMore(i)'>Read More</button>
+          <button (click)='readMore(i)' class="btn btn-success">Read More</button>
         </div>
 
-        <div class="card-body">
-          <app-quote-details *ngIf='quote.showDetail' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
+        <div *ngIf='quote.showDetail'>
+          <app-quote-details  [quote]='quote' (isComplete) = 'deleteQuote($event,i)' (isUp)='addVote($event,i)' (isDown)='removeVote($event,i)'></app-quote-details>
         </div>
-      </div>
-        </div>
-
-      </div>
-      <div class="col-md-6">
-        <app-quote-form></app-quote-form>
       </div>
     </div>
+      </div>
+      
+      <div class="col-md-6">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      </div>
+    
   </div>
 </div>
 </div>

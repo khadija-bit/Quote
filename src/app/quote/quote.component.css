@@ -1,0 +1,12 @@
+h1{
+   
+    
+}
+.container{
+    font-family: 'El Messiri', sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1585718228814-aa49f1639bd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
