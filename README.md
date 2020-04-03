@@ -11,7 +11,7 @@ This angular app allow user to create a quotes and are able to read quote and al
  ## installation/Setup instruction
 * git clone https://github.com/khadija-bit/Quote.git
 * Install visual Code
-*
+
 
 ## Contact Information
 For any feedback contact me sumeyahassan34@gmail.com  
