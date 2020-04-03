@@ -1,4 +1,11 @@
 .form-group{
-    color: darkred.cs;
+    color: darkred;
     background: transparent;
+}
+.container-fluid{
+    background-color: transparent;
+}
+h1{
+    color: darkred;
+    text-align: center;
 }
