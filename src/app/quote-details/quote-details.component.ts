@@ -7,6 +7,7 @@ import { Quote } from '../quote';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
+  @Input () numberOfLikes : number = 0;
 
   @Input() quote: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
@@ -14,14 +15,14 @@ export class QuoteDetailsComponent implements OnInit {
   quoteDelete(complete:boolean){
     this.isComplete.emit(complete);
   }
-  @Output()isUp = new EventEmitter<boolean>()
-  upVote(add:boolean){
-    this.isUp.emit();
+ 
+  likeButtonClick(){
+    this.numberOfLikes++;
   }
-  @Output()isDown = new EventEmitter<boolean>()
-    downVote(ad:boolean){
-    this.isDown.emit();
+  dislikeButtonClick(){
+    this.numberOfLikes++;
   }
+
   constructor() { }
 
   ngOnInit() {
