@@ -5,3 +5,7 @@ p{
     float: inline-end;
     background-color: peachpuff;
 }
+:host {
+    display: block;
+    border: 1px solid transparent;
+  }
