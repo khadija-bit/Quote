@@ -9,7 +9,7 @@
         
           <div class="col-md-10">
             <div class="card-body">
-          <h4 class="card-tittle" appStrikethrough *ngIf="highestUpvote()===quote.upvote && quote.upvote>0">{{quote.name}} </h4>
+          <h4 class="card-tittle" appStrikethrough >{{quote.name}} </h4>
           <button (click)='readMore(i)' class="btn btn-success">Read More</button>
           <p>posted on {{quote.completeDate|date|uppercase}}</p>
         </div>
